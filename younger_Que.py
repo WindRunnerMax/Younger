@@ -86,6 +86,10 @@ def login(user,password):
         if o is not -1:
             print("CODE MATCH:" + code)
             return mysession
+        o = html.text.find('"err":6,')
+        if o is not -1:
+            print("账号密码错误")
+            exit(0)
         pass
 
 
